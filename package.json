@@ -1,0 +1,37 @@
+{
+  "name": "pugstagram",
+  "version": "0.0.1",
+  "description": "Proyecto de red social para curso de Svelte",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SantiagoPintos/pugstagram.git"
+  },
+  "keywords": [
+    "Proyecto",
+    "Svelte"
+  ],
+  "author": "Santiago Pintos <spintos@outlook.es>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SantiagoPintos/pugstagram/issues"
+  },
+  "homepage": "https://github.com/SantiagoPintos/pugstagram#readme",
+  "dependencies": {
+    "svelte": "^3.53.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "svelte-loader": "^3.1.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
