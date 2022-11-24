@@ -23,7 +23,7 @@
     .Stories-item h2 {
       font-size: 14px;
       color: black;
-      margin: 0 0 0 0.5em;
+      margin: 0 0 0 0em;
     }
     .Stories-item h2 span {
       display: block;
@@ -59,6 +59,11 @@
       background-origin: border-box;
       background-clip: content-box, border-box;
     }
+    .Stories-item-text{
+        display: grid;
+        text-align: left;
+        margin: 0 0 0 0.5em;
+    }
 </style>
 
 <div class="Stories">
@@ -72,8 +77,10 @@
                 <div class="Stories-item-box">
                     <img src="https://imageio.forbes.com/specials-images/imageserve/62d599ede3ff49f348f9b9b4/0x0.jpg?format=jpg&crop=821,821,x155,y340,safe&height=416&width=416&fit=bounds" alt="story">
                 </div>
-                <h2>billgates</h2>
-                <span>2 horas antes</span>
+                <div class="Stories-item-text">
+                    <h2>billgates</h2> 
+                    <span>2 horas antes</span>
+                </div>
             </div>
         </div>
     </div>
