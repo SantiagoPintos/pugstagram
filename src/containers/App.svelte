@@ -16,9 +16,6 @@
         //TEMP: Quirk to fix missing pic
         data.posts[0].avatar = 'https://media.kidadl.com/5fca609558f6ce3b7edd362e_cats_jokes_can_bring_you_oodles_of_laughter_e349432cab.jpeg';
         data.posts[0].photo = 'https://media.kidadl.com/5fca609558f6ce3b7edd362e_cats_jokes_can_bring_you_oodles_of_laughter_e349432cab.jpeg';
-        console.log('app:' + data.user);
-        console.log('app.svelte: nickname :'+ data.user.nickname);
-        console.log('app.svelte: name :'+ data.user.name);
     });
 </script>
 

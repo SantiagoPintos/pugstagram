@@ -7,8 +7,7 @@
     export let postComment;
     export let comments;
     export let avatar;
-
-    console.log(photo);
+    
 </script>
 
 

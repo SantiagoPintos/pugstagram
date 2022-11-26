@@ -3,11 +3,8 @@
     import Stories from './Stories.svelte';
     import Footer from './Footer.svelte';
 
-    export let nicknanme;
+    export let nickname;
     export let name;
-
-    console.log('sidebar nickname' + nicknanme);
-    console.log('sidebar name '+ name);
 </script>
 
 <style>
@@ -22,7 +19,7 @@
 
 <div class="Sidebar">
     <div class="Sidebar-container">
-        <Profile {nicknanme} {name} />
+        <Profile {nickname} {name} />
         <Stories />
         <Footer />
     </div>
