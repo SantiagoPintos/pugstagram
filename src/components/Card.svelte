@@ -3,6 +3,7 @@
     import Modal from './Modal.svelte';
     import Share from './Share.svelte';
     import { blur } from 'svelte/transition';
+    import { likeCount } from './../store/store.js'
 
     export let username;
     export let location;
@@ -12,9 +13,21 @@
     export let avatar;
     
     let isModal = false;
+    let like = false;
+    let bookmark = false;
+
 
     function handleClick(){
       isModal = !isModal;
+    }
+
+    function handleLike(){
+      like = !like;
+      if (like) {
+        likeCount.update(n => n+1);
+      } else {
+        likeCount.update(n => n-1);
+      }
     }
 
 </script>
@@ -155,18 +168,29 @@
             </div>
         </div>
         <div class="Card-photo">
-            <figure>
+           <!-- dblclick = doubleclick -->
+            <figure on:dblclick={handleLike}>
                 <img src={photo} alt={username}>
             </figure>
         </div>
         <div class="Card-icons">
             <div class="Card-icons-firsts">
-                <i class="fa-solid fa-heart" />
+                <!-- svelte-ignore a11y-click-events-have-key-events -->
+                <!-- class:active-like le asigna una nueva clase cuando se cumpla la condición -->
+                <i class="fa-solid fa-heart" 
+                  class:active-like={like}
+                  on:click={handleLike}
+                />
                 <!-- svelte-ignore a11y-click-events-have-key-events -->
                 <i class="fa-solid fa-paper-plane" on:click={handleClick} />
             </div>
             <div class="Card-icons-second">
-                <i class="fa-solid fa-bookmark"/>
+                <!-- svelte-ignore a11y-click-events-have-key-events -->
+                <i class="fa-solid fa-bookmark"
+                  class:active-bookmark={bookmark}
+                  on:click={()=>(bookmark = !bookmark)}
+                />
+                <!-- diferente forma de manejar on:click -->
             </div>
         </div>
         <div class="Card-description">
