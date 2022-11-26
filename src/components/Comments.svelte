@@ -1,5 +1,24 @@
 <script>
-    
+  import App from "../containers/App.svelte";
+
+
+    export let comments = [];
+
+    function addComment(event){
+      const msg = event.target.text.value;
+      if(msg.length > 1){
+        const message = {
+          //timestamp unix
+          id: Date.now(),
+          text: msg,
+          username: 'peterl',
+        };
+        //agrega datos a comments
+        comments = [...comments, message];
+        event.target.text.value = '';
+      }
+      
+    }
 </script>
 
 <style>
@@ -59,12 +78,15 @@
 
 <div class="Comments">
     <div class="Comments-content">
-        <div class="Comments-users">
-            <h3>Toby</h3>
-            <span>Tremenda foto amigo!</span>
-        </div>
+
+      {#each comments as comment (comment.id)}
+      <div class="Comments-users">
+        <h3>{comment.username}</h3>
+        <span>{comment.text}</span>
+      </div>
+      {/each}
         <div class="Comments-add">
-            <form>
+            <form on:submit|preventDefault={addComment}>
                 <input type="text" class="Comments-input" placeholder="Agregar comentario..." id="text" >
                 <button type="submit">Post</button>
             </form>
