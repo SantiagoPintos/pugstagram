@@ -33,12 +33,18 @@
       text-decoration: none;
       color: black;
       font-size: 14px;
-      margin: 2em 0 0 0;
+      margin: 0.7em 0 0 0;
     }
     .Share-content i {
       color: #3b5998;
       margin: 0 0.5em 0 0;
       font-size: 20px;
+    }
+    .Share-facebook i {
+    color: #3b5998;
+    }
+    .Share-whatsapp i {
+       color: #1bd741;
     }
 </style>
 
@@ -49,10 +55,17 @@
         <i class='fas fa-times-circle' on:click />
     </div>
     <div class="Share-content">
-        <a href="https://www.facebook.com/sharer/sharer.php?&u=https://pugstagram.com"
-        target="_blank ">
-            <i class="fab fa-facebook-square"/>
-            Compartir en Facebook
+      <div class="Share-facebook">
+        <a href="https://www.facebook.com/sharer/sharer.php?&u=https://pugstagram.co/" target="_blank" rel="noreferrer">
+          <i class="fab fa-facebook-square" />
+          Compartir en Facebook!
         </a>
+      </div>
+      <div class="Share-whatsapp">
+        <a href="https://api.whatsapp.com/send?&text=mira%20esta%20hermosa%20web%20https://pugstagram.com/" target="_blank" rel="noreferrer">
+          <i class="fab fa-whatsapp-square" />
+          Compartir en Whatsapp!
+        </a>          
+      </div>
     </div>
 </div>
