@@ -1,0 +1,2 @@
+Netlify es una herramienta para hacer despliegues de páginas web (En este caso desde un repositorio de github) de forma sencilla
+
